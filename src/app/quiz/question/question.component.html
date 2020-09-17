@@ -1,0 +1,10 @@
+<ng-container *ngIf="question$ | async as question">
+  <div>
+    {{question.question}}
+  </div>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let opt of question.options">
+      {{opt}}
+    </mat-list-option>
+  </mat-selection-list>
+</ng-container>
