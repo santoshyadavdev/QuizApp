@@ -7,4 +7,9 @@
       {{opt}}
     </mat-list-option>
   </mat-selection-list>
+  <div>
+
+    <button *ngIf="question.prevQId" [routerLink]="['/quiz',question.prevQId]" mat-raised-button color="primary">Previous</button>
+    <button *ngIf="question.nextQId" [routerLink]="['/quiz',question.nextQId]" mat-raised-button color="primary">Next</button>
+  </div>
 </ng-container>
